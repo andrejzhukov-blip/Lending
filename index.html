@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лендинг - Жуков А. А.</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="preloader">
+    <img src="preloader.gif" alt="загрузка страницы">
+    </div>
+    <header class="header">
+        <div class="logo">
+            <a href="#">
+                <img src="Герб.png" height="50" alt="логотип">
+            </a>
+        </div>
+        <nav class="nav">
+            <a href="#about">Обо мне</a>
+            <a href="#experience">Опыт работы</a>
+            <a href="#education">Образование</a>
+            <a href="#contacts">Контакты</a>
+        </nav>
+    </header>
+
+    <div class="about" id="about">
+        <img src="kriro.jpg" class="circular-image" alt="Мое фото">
+        <div class="aboutText">
+            <h3>Немного о себе</h3>
+            <p>Я, Жуков Андрей Андреевич, студент факультета ИБМ в МГТУ им. Баумана. Увлекаюсь киберспортом и азартом.</p>
+        </div>
+    </div>
+ii
+    <div class="experience" id="experience">
+        <div class="experienceText">
+            <h3>Опыт работы</h3>
+            <ul>
+                <li><b>2025 - Настоящее время:</b> Младший аналитик в IT-компании</li>
+                <li><b>2024 - 2025:</b> Учебная практика на кафедре ИБМ3</li>
+                <li><b>Фриланс:</b> Создание лендингов и верстка таблиц</li>
+            </ul>
+        </div>
+        <img src="vitki.jpg" class="circular-image" alt="Опыт работы">
+    </div>
+
+    <div class="education" id="education">
+        <img src="igogo.jpg" class="circular-image" alt="Образование">
+        <div class="educationText">
+            <h3>Образование</h3>
+            <p><b>ВУЗ:</b> МГТУ им. Н.Э. Баумана</p>
+            <p><b>Факультет:</b> Инженерный бизнес и менеджмент (ИБМ)</p>
+            <p><b>Кафедра:</b> ИБМ3</p>
+            <p><b>Специальность:</b> Инноватика</p>
+        </div>
+        <div style="margin-top: 20px;">
+    <h4>Смена герба</h4>
+    <button onclick="document.getElementById('gerb').src='Цветной герб.png'">Цветной герб</button>
+    <img id="gerb" src="Цветной герб.png" style="width:100px" alt="Герб">
+    <button onclick="document.getElementById('gerb').src='Нуар герб.png'">Нуарный герб</button>
+    </div>
+    </div>
+
+    <div class="contacts" id="contacts">
+        <button onclick="openForm()" style="margin-top: 15px; padding: 10px;">Связаться со мной</button>
+        <h3>Контакты</h3>
+        <p>Телефон: <a href="tel:+7(805)555-35-35">+7(805)555-35-35</a></p>
+        <p>График связи: после 19 не отвечаю</p>
+        <p>Email: <a href="https://tenor.com/view/67-sixty-seven-6-7-6-7-gif-1868485740777950534">zguk_aa5@student.bmstu.ru</a></p>
+        <p>Место учебы: МГТУ им. Н.Э. Баумана</p>
+        
+        <div class="map-container">
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A0562e840fcc8be09b119a0088b907f1543bead54b03dfbcbc453cd97dc3f8c8b&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 Жуков Андрей Андреевич. МГТУ им. Баумана</p>
+    </footer>
+
+    <script src="index.js"></script>
+    <div id="popupForm" class="hide-popup">
+    <div class="form-content">
+        <h2>Форма связи</h2>
+        <form method="post" action="#">
+            <p><input type="text" name="name" placeholder="Ваше имя" required></p>
+            <p><input type="email" name="email" placeholder="Ваша почта"></p>
+            <p><input type="tel" name="phone" placeholder="Ваш номер телефона"></p>
+            <p>
+                <input type="radio" name="status" value="student"> Студент
+                <input type="radio" name="status" value="employer"> Работодатель
+            </p>
+            <p>
+                <select name="theme">
+                    <option value="job">Предложение о работе</option>
+                    <option value="project">Проект</option>
+                    <option value="other">Другое</option>
+                </select>
+            </p>
+            <p><textarea name="message" placeholder="Сообщение" rows="4"></textarea></p>
+            
+            <button type="submit">Отправить</button>
+            <button type="button" onclick="closeForm()">Закрыть</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
